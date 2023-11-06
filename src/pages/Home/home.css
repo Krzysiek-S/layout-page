@@ -55,6 +55,11 @@
     cursor: pointer;
     border-color: #0271e1;
   }
+
+  .contentButton {
+    display: flex;
+    justify-content: center;
+  }
   
   .expandButton {
     display: flex;

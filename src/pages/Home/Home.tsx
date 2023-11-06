@@ -29,24 +29,25 @@ const Home: React.FC<ShowMore> = ({ moreTiles, setMoreTiles }) => {
             </a>
           ))}
       </div>
-
-      <button
-        className="expandButton"
-        onClick={() => {
-          setMoreTiles((prev: boolean) => !prev);
-        }}
-      >
-        <span className="toggleButtonText">
-          {moreTiles ? "show less categories" : "show more categories"}
-        </span>
-        <span className="toggleButtonArrow">
-          {moreTiles ? (
-            <IoIosArrowUp size={20} />
-          ) : (
-            <IoIosArrowDown size={20} />
-          )}
-        </span>
-      </button>
+      <div className="contentButton">
+        <button
+          className="expandButton"
+          onClick={() => {
+            setMoreTiles((prev: boolean) => !prev);
+          }}
+        >
+          <span className="toggleButtonText">
+            {moreTiles ? "show less categories" : "show more categories"}
+          </span>
+          <span className="toggleButtonArrow">
+            {moreTiles ? (
+              <IoIosArrowUp size={20} />
+            ) : (
+              <IoIosArrowDown size={20} />
+            )}
+          </span>
+        </button>
+      </div>
     </div>
   );
 };
